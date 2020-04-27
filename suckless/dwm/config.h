@@ -11,7 +11,7 @@ static const int smartgaps          = 0;        /* 1 means no outer gap when the
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "monospace:size=10", "JoyPixels:pixelsize=10:antialias=true:autohint=true"  };
-static char dmenufont[]       = "monospace:size=10";
+static char dmenufont[]		    = "monospace:size=10";
 static char normbgcolor[]           = "#222222";
 static char normbordercolor[]       = "#444444";
 static char normfgcolor[]           = "#bbbbbb";
@@ -117,7 +117,7 @@ static Key keys[] = {
 	{ MODKEY,			XK_Tab,		view,		{0} },
 	/* { MODKEY|ShiftMask,		XK_Tab,		spawn,		SHCMD("") }, */
 	{ MODKEY,			XK_q,		killclient,	{0} },
-	/* { MODKEY|ShiftMask,		XK_q,		spawn,		SHCMD("") }, */
+	{ MODKEY|ShiftMask,		XK_q,		quit,		{0} },
 	{ MODKEY,			XK_w,		spawn,		SHCMD("firefox") },
 	{ MODKEY|ShiftMask,		XK_w,		spawn,		SHCMD("st -e sudo nmtui") },
 	{ MODKEY,			XK_e,		spawn,		SHCMD("st -e neomutt ; pkill -RTMIN+12 dwmblocks; rmdir ~/.abook") },
@@ -191,10 +191,10 @@ static Key keys[] = {
 	{ MODKEY,			XK_Page_Down,	shiftview,	{ .i = 1 } },
 	{ MODKEY,			XK_Insert,	spawn,		SHCMD("notify-send \"📋 Clipboard contents:\" \"$(xclip -o -selection clipboard)\"") },
 
-	{ MODKEY,			XK_F1,		spawn,		SHCMD("groff -mom /usr/local/share/dwm/larbs.mom -Tpdf | zathura -") },
+	/* { MODKEY,			XK_F1,		spawn,		SHCMD("groff -mom /usr/local/share/dwm/larbs.mom -Tpdf | zathura -") }, */
 	{ MODKEY,			XK_F2,		quit,		{1} },
 	{ MODKEY,			XK_F3,		spawn,		SHCMD("displayselect") },
-	/* { MODKEY,			XK_F4,		spawn,		SHCMD("") }, */
+	{ MODKEY,			XK_F4,		spawn,		SHCMD("i3lock -i arch-linux-wallpaper.png") },
 	{ MODKEY,			XK_F5,		xrdb,		{.v = NULL } },
 	{ MODKEY,			XK_F6,		spawn,		SHCMD("torwrap") },
 	{ MODKEY,			XK_F7,		spawn,		SHCMD("td-toggle") },
