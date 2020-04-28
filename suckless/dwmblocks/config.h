@@ -9,9 +9,9 @@ static const Block blocks[] = {
 	/* {"cpu",		10,	13}, */
 	/* {"memory",	10,	14}, */
 	/* {"moonphase",	18000,	5}, */
-	{"news",	0,	6},
-	{"mailbox",	180,	12},
+	/* {"mailbox",	180,	12}, */
 	{"weather",	600,	5},
+	{"news",	0,	6},
 	{"internet",	5,	4},
 	{"light",	0,	10},
 	{"volume",	0,	10},
