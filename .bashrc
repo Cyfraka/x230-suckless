@@ -18,6 +18,6 @@ neofetch
 export PATH=${HOME}/tools/vim/bin:$PATH
 export EDITOR=vim
 
-#set -o vi
+set -o vi
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
